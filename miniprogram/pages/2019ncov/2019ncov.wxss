@@ -1,0 +1,9 @@
+/* miniprogram/pages/2019ncov.wxss */
+
+.echart-container {
+  height: 600rpx;
+}
+
+.echart-container-small {
+  height: 400rpx;
+}

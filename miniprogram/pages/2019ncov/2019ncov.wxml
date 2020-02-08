@@ -1,0 +1,69 @@
+<!-- miniprogram/pages/2019ncov.wxml -->
+<view class="cu-bar bg-white solid-bottom">
+  <view class="action">
+    <text class="cuIcon-titles text-cyan"></text>
+    <text class="text-xl text-bold">全市数据统计</text>
+  </view>
+  <view class="action">
+    <button class="cu-btn bg-white" style="width: auto; padding: 0; font-weight: 400;" bindtap="showDataSrcState">
+      <text class="cuIcon-question"></text>
+      <text class="text-df" style="margin-left: 2px;">数据说明</text>
+    </button>
+  </view>
+</view>
+<view class="padding flex text-center text-grey bg-white">
+  <view class="flex flex-sub flex-direction solid-right">
+    <view class="text-xxl text-red">{{confirmedSum}}</view>
+    <view class="margin-top-sm">
+      <text class="cuIcon-attentionfill"></text>
+      确诊
+    </view>
+  </view>
+  <view class="flex flex-sub flex-direction solid-right">
+    <view class="text-xxl text-black">{{deathSum}}</view>
+    <view class="margin-top-sm">
+      <text class="cuIcon-roundclosefill"></text>
+      死亡
+    </view>
+  </view>
+  <view class="flex flex-sub flex-direction">
+    <view class="text-xxl text-green">{{curedSum}}</view>
+    <view class="margin-top-sm">
+      <text class="cuIcon-likefill"></text>
+      治愈
+    </view>
+  </view>
+</view>
+<view class="cu-bar bg-white solid-bottom margin-top">
+  <view class="action">
+    <text class="cuIcon-titles text-cyan"></text>
+    <text class="text-xl text-bold">疫情地图</text>
+  </view>
+  <view class="action">
+    <button class="cu-btn bg-white" style="width: auto; padding: 0; font-weight: 400;" open-type="share">
+      <text class="cuIcon-share"></text>
+      <text class="text-df" style="margin-left: 2px;">分享</text>
+    </button>
+  </view>
+</view>
+<view class="bg-white echart-container">
+  <ec-canvas id="ec-dom-map" canvas-id="ec-map" ec="{{ ecMap }}"></ec-canvas>
+</view>
+<view class="cu-bar bg-white solid-bottom margin-top">
+  <view class="action">
+    <text class="cuIcon-titles text-cyan"></text>
+    <text class="text-xl text-bold">疫情累计趋势</text>
+  </view>
+</view>
+<view class="bg-white echart-container-small">
+  <ec-canvas id="ec-dom-total-line" canvas-id="ec-total-line" ec="{{ ecTotalLine }}"></ec-canvas>
+</view>
+<view class="cu-bar bg-white solid-bottom margin-top">
+  <view class="action">
+    <text class="cuIcon-titles text-cyan"></text>
+    <text class="text-xl text-bold">疫情新增趋势</text>
+  </view>
+</view>
+<view class="bg-white margin-bottom echart-container-small">
+  <ec-canvas id="ec-dom-new-line" canvas-id="ec-new-line" ec="{{ ecNewLine }}"></ec-canvas>
+</view>

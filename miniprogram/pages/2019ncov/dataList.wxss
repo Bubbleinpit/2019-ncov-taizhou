@@ -1,0 +1,28 @@
+/* miniprogram/pages/2019ncov/dataList.wxss */
+
+.table {
+  width: 100%;
+  padding: 10rpx;
+}
+
+.td-title {
+  width: 40%;
+  height: 60rpx;
+  font-size: 30rpx;
+  text-align: center;
+  background-color: white;
+}
+
+.td {
+  width: 20%;
+  height: 60rpx;
+  font-size: 30rpx;
+  text-align: center;
+  background-color: white;
+}
+
+.share-button {
+  position: fixed;
+  right: 30rpx;
+  bottom: 30rpx;
+}
