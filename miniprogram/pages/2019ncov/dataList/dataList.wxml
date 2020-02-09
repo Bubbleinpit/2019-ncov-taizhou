@@ -1,13 +1,13 @@
 <!-- miniprogram/pages/2019ncov/dataList.wxml -->
 <rich-text nodes="{{dataTable}}"></rich-text>
-<view wx:for="{{articles}}" wx:key="_id" class="cu-card article">
+<navigator wx:for="{{articles}}" wx:key="_id" class="cu-card article no-card" style="margin: 15rpx 30rpx; border-radius: 10rpx;" url="/pages/2019ncov/article/article?title={{item.title}}&url={{item.url}}">
   <view class="cu-item shadow">
     <view class="title">
       <view class="text-cut">{{item.title}}</view>
     </view>
     <view class="content">
       <view class="desc">
-        <view class="text-content">{{item.abstract}}</view>
+        <view class="text-content" style="height: auto;">{{item.abstract}}</view>
         <view>
           <view class="cu-tag bg-orange light sm round">{{item.timeDesc}}</view>
           <view class="cu-tag bg-green light sm round">{{item.time}}</view>
@@ -15,7 +15,7 @@
       </view>
     </view>
   </view>
-</view>
+</navigator>
 <view wx:if="{{loadingMore}}" class="cu-load loading"></view>
 <view wx:if="{{noMore}}" class="cu-load over"></view>
 <button class="cu-btn icon lg bg-cyan shadow share-button" open-type="share">

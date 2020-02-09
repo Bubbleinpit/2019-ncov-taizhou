@@ -1,0 +1,10 @@
+<!-- miniprogram/pages/2019ncov/article/article.wxml -->
+<view class="solid-bottom text-xl padding">
+  <text class="text-black text-bold">文章网址</text>
+</view>
+<view class="solid-bottom text-sm padding">
+  <text class="text-grey">{{url}}</text>
+</view>
+<button class="cu-btn block lines-cyan lg" style="margin-top: 40rpx;" bindtap="copyUrl">
+  复制网址
+</button>
