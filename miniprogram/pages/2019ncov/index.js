@@ -83,6 +83,9 @@ function getTotalLineOption(dbRes) {
     xAxis: {
       type: 'time',
       axisLine: { show: false },
+      axisLabel: {
+        formatter: value => new Date(value).toISOString().slice(5, 10)
+      },
       splitLine: {
         show: false
       }
@@ -135,6 +138,9 @@ function getNewLineOption(dbRes) {
     xAxis: {
       type: 'time',
       axisLine: { show: false },
+      axisLabel: {
+        formatter: value => new Date(value).toISOString().slice(5, 10)
+      },
       splitLine: {
         show: false
       }
