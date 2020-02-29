@@ -192,9 +192,8 @@ function updateTotalLine() {
       deathSum: $.sum('$newDeath'),
       curedSum: $.sum('$newCured')
     })
-    .sort({ _id: -1 })
-    .limit(20)
     .sort({ _id: 1 })
+    .limit(100)
     .end({
       success: res => {
         totalLineChart.setOption(getTotalLineOption(res.list))
@@ -223,9 +222,8 @@ function updateNewLine() {
       deathSum: $.sum('$newDeath'),
       curedSum: $.sum('$newCured')
     })
-    .sort({ _id: -1 })
-    .limit(20)
     .sort({ _id: 1 })
+    .limit(100)
     .end({
       success: res => {
         newLineChart.setOption(getNewLineOption(res.list))
